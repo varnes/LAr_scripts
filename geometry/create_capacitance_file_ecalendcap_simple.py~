@@ -1,0 +1,7 @@
+strip_C_per_cm = 1.9 # pF per cm, taken from barrel prototype readout board measurements
+
+shield_to_pad_C_per_cm = 1.2 # pF per cm, taken from barrel prototype readout board measurements
+
+z_depth = 45. # depth of the the endcap calorimeter, in cm.  Ideally would be read in from xml
+
+n_cells_in_z[3] = {10, 10, 10} # ideally would be read in from xml

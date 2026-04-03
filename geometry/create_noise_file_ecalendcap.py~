@@ -1,0 +1,26 @@
+import ROOT
+import os
+
+#start with some numbers that should ideally be read from xml:
+nWheels = 3
+ECalEndcapNumCalibRhoLayers = [10, 14, 34]
+ECalEndcapNumCalibZLayers = [10,10,10]
+ECalEndcapNumReadoutRhoLayers = [10, 14, 34]
+ECalEndcapNumReadoutZLayers = [10,10,10]
+# end of numbers from xml
+
+nLayers = 0
+
+for i in range(0, nWheels) :
+    nLayers += ECalEndcapNumCalibRhoLayers[i]*ECalEndcapNumCalibZLayers[i]
+    
+print(nLayers)
+
+filename = "endcap_capacitances.root"
+fIn = ROOT.TFile(filename, "r")
+
+output_folder = "noise_capa_ecalendcap" 
+if not os.path.isdir(output_folder):
+    os.mkdir(output_folder)
+
+    
